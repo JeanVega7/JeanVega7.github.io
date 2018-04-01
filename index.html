@@ -102,7 +102,18 @@
         </li>
       </ol>
   </div>
+<canvas id="myCanvas" width=auto height="50" style="border:1px solid white;"> </canvas>
 
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var grd = ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"black");
+ctx.fillStyle = grd;
+ctx.fillRect(0,0,200,100);
+</script>
+  
 <!--W3C HTML5 Badge-->
   <a href="http://www.w3.org/html/logo/">
     <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics">
