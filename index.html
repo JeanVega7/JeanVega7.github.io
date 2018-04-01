@@ -22,6 +22,7 @@
           About Me
         </a>      </li>
       <li>
+
         <a href="#courses">
           Relevant Courses
         </a>
@@ -54,6 +55,17 @@
       I am 19 years old and currently a freshmen at Florida Gulf Coast University planning to major in Software Engineering and minor in Mathematics.
     </p>
     <img src="Me.jpg" alt="Me" width="300" height="300"/>
+    <canvas id="myCanvas" width="200" height="50" style="border:1px solid white;"> </canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var grd = ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"black");
+ctx.fillStyle = grd;
+ctx.fillRect(0,0,200,100);
+</script>
   </div>
   
   <!--Item List of Course Relating to my Major -->
