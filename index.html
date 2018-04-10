@@ -158,6 +158,31 @@
   <a href="http://www.w3.org/html/logo/">
     <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics">
   </a>
+
+<h1>JavaScript IPO</h1>
+
+<p>Input:</p>
+
+<input id="in">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="out"></p>
+
+<script>
+function myFunction() {
+    var inVar, outVar;
+
+    // Input
+    inVar = document.getElementById("in").value;
+    
+    // Processing
+    outVar = inVar;
+
+	// Output
+    document.getElementById("out").innerHTML = outVar;
+}
+</script>
   
 </body>
 </html>
