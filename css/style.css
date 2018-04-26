@@ -21,9 +21,9 @@ h3 {
 ul li {
     display: inline-block;
     padding: 10px;
-    border: double white;
-    background-color: red;
-    color: white;
+    border: double red;
+    background-color: white;
+    color: black;
 }
 /* Image properties https://www.w3schools.com/css/css_float.asp */
 .image {
