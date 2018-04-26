@@ -3,6 +3,7 @@
 html {
     font-size: 18px;
     font-family: sans-serif;
+    color: #6B6B6B;
 }
 /* Double Solid Lines Under Main Heading "Jean Vega" https://www.w3schools.com/css/css_border.asp*/
 h1 {
@@ -29,18 +30,3 @@ ul li {
 /* Image properties https://www.w3schools.com/css/css_float.asp */
 .image {
     float: right;
-
-/* Link Button Properties https://www.w3schools.com/css/css_link.asp */
-a:link {
-    background-color: #f44336;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-
-
-a:hover {
-    background-color: red;
-}
