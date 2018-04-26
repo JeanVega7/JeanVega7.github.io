@@ -3,9 +3,6 @@ html {
     font-size: 18px;
     font-family: sans-serif;
 }
-body {
-    background-color: #E0E0E0;
-}
 /* Double Solid Lines Under Main Heading "Jean Vega" https://www.w3schools.com/css/css_border.asp*/
 h1 {
     border-bottom: 6px double red;
