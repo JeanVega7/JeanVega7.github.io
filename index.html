@@ -161,7 +161,8 @@
  
 <button type="button" onclick="myFunction()">Calculate!</button>
  
-<p id="out">Total = </p>
+<p id="out2">Tax = </p>
+<p id="out1">Total = </p>
  
 <script>
 function myFunction() {
@@ -171,10 +172,12 @@ function myFunction() {
     num1 = parseInt(document.getElementById("in").value);
    
     // Processing
+    tax = "Tax = " + num1 * 0.07
     total = "Total = " + (num1 * 1.27)
  
     // Output
-    document.getElementById("out").innerHTML = total;
+    document.getElementById("out1").innerHTML = tax;
+    document.getElementById("out2").innerHTML = total;
 }
 </script>
 	
