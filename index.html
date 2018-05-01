@@ -195,10 +195,10 @@ function myFunction() { var asciiCode, encryptedText = "";
 		       var str = document.getElementById("in");
 		       for (i = 0, i < str.length; i++) {
 			       asciiCode = str.charCodeAt(i);
-			       encryptedText = String.fromCharCode(asciiCode);
-			       
-		document.getElementById("out").innerHTML = encryptedText;
-		       }			       
+		       }
+		       encryptedText = String.fromCharCode(asciiCode);
+			document.getElementById("out").innerHTML = encryptedText;
+		       			       
 </script>
 </div>
 	
