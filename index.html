@@ -192,15 +192,18 @@ function myFunction() {
 <script>
 function myFunction() {
     var input = document.getElementById("input").value;
-    for (var i = 0; i < input.length; i++) {
+    var encryptedText = "";
+    var i;
+    for (i = 0; i < input.length; i++) {
         var asciicode = input.charCodeAt(i);
-        var c;
+        var c = input[i];
         if (65 <= asciicode && asciicode <=  90) 
             c = String.fromCharCode((asciicode - 65 + 7 ) % 26 + 65);
         else if (97 <= asciicode && asciicode <= 122) 
-            c = String.fromCharCode((asciicode - 97 + 7) % 26 + 97);                                                                              
+            c = String.fromCharCode((asciicode - 97 + 7) % 26 + 97);
+        encryptedText += c;
     }
-    document.getElementById("output").innerHTML = "Encrypted Message: " + c;
+    document.getElementById("output").innerHTML = encryptedText;
 }	       
 </script>
 </div>
