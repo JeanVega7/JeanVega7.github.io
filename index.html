@@ -194,8 +194,10 @@ function myFunction() { var asciiCode, encryptedText = "";
 		       // Input
 		       var str = document.getElementById("in");
 		       for (i = 0, i < str.length; i++) {
-			       var n = str.charCodeAt(i);
-		document.getElementById("out").innerHTML = n;
+			       asciiCode = str.charCodeAt(i);
+			       encryptedText = String.fromCharCode(asciiCode);
+			       
+		document.getElementById("out").innerHTML = encryptedText;
 		       }			       
 </script>
 </div>
