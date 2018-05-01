@@ -158,13 +158,13 @@
  
 <input id="in">
  
-<button type="button" onclick="myFunction()">Calculate!</button>
+<button type="button" onclick="TipTotal()">Calculate!</button>
  
 <p id="out1">Tip = </p>
 <p id="out2">Total = </p>
  
 <script>
-function myFunction() {
+function TipTotal() {
     var num1, outVar;
  
     // Input
@@ -190,12 +190,12 @@ function myFunction() {
 <input id="input2">
 	</br>
 	</br>
-<button type="button" onclick="myFunction()">Encrypt</button>
+<button type="button" onclick="CaesarCipher()">Encrypt</button>
 	
 <p id="output">Encrypted Message: </p>
 
 <script>
-function myFunction() {
+function CaesarCipher() {
     var input = document.getElementById("input").value;
     var shift = document.getElementById("input2").value;
     var encryptedText = "";
