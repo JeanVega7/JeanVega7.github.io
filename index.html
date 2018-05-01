@@ -162,18 +162,31 @@
 	<p id="out2">
 	  Total =
 	</p>
-	<p>
-	  <strong>
-	    Caesar Cipher
-	  </strong>
-	</p>
-	<p>
-	  Enter A Message
-	</p>
+	<script>
+          function myFunction() {
+	    var num1, outVar;
+	    // Input
+              num1 = parseInt(document.getElementById("in").value);
+            // Processing
+              tip = "Tip = " + num1 * 0.2
+              total = "Total = " + (num1 * 1.27)
+	    // Output
+              document.getElementById("out1").innerHTML = tip;
+              document.getElementById("out2").innerHTML = total;
+	  }
+	</script>
+    <p>
+      <strong>
+        Caesar Cipher
+      </strong>
+    </p>
+    <p>
+      Enter A Message
+    </p>
       <input id="input" type="text" />
-	<p>
-	  Enter A Shift Value (Has to be a postive whole number)
-	</p>
+    <p>
+      Enter A Shift Value (Has to be a postive whole number)
+    </p>
       <input id="input2" type="text" />
       <button type="button">
 	Encrypt
@@ -181,6 +194,24 @@
 	<p id="output">
 	  Encrypted Message:
 	</p>
+	<script>
+          function myFunction() {
+            var input = document.getElementById("input").value;
+            var shift = document.getElementById("input2").value;
+	    var encryptedText = "";
+            var i;
+            for (i = 0; i < input.length; i++) {
+	      var asciicode = input.charCodeAt(i);
+	      var c = input[i];
+              if (65 <= asciicode && asciicode <=  90) 
+                c = String.fromCharCode((asciicode - 65 + shift ) % 26 + 65);
+              else if (97 <= asciicode && asciicode <= 122) 
+                c = String.fromCharCode((asciicode - 97 + shift) % 26 + 97);
+              encryptedText += c;
+	    }
+	    document.getElementById("output").innerHTML = "Encrypted Message: " + encryptedText;
+	  }	       
+	</script>
 </div>
 <div id="accesibility">
   <h2>
@@ -215,19 +246,37 @@
     </p>
 </div>
 <!--Canvas Image Color Red and Black Gradient https://www.w3schools.com/html/html5_canvas.asp-->
-<p>
   <canvas id="myCanvas" style="border: 1px solid white;" width="auto" height="50">
     Your browser does not support the HTML5 canvas tag.
   </canvas>
-</p>
+  <script> 
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var grd = ctx.createLinearGradient(0,0,200,0);
+      grd.addColorStop(0,"red");
+      grd.addColorStop(1,"black");
+      ctx.fillStyle = grd;
+      ctx.fillRect(0,0,200,100);
+    </script>
 <!--SVG Image of JV in ellipse https://www.w3schools.com/html/html5_svg.asp-->
-<p>
-  JV Sorry, your browser does not support inline SVG.
+  <svg height="130" width="500">
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%"
+        style="stop-color:red;stop-opacity:1" />
+        <stop offset="100%"
+        style="stop-color:black;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+  <ellipse cx="50" cy="90" rx="45" ry="35" fill="url(#grad1)" />
+  <text fill="#ffffff" font-size="40" font-family="Verdana" x="28" y="105">
+    JV
+  </text>
+    Sorry, your browser does not support inline SVG.
+  </svg>
   <br />
   <br />
-</p>
 <!--W3C HTML5 Badge-->
-<p>
   <a href="http://www.w3.org/html/logo/">
     <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" alt="" width="165" height="64" />
   </a>
