@@ -150,7 +150,6 @@
 	</li>
       </ol>
   </div>
-
 <div id="javascript">
 <h2>JavaScript IPO</h2>
 
@@ -197,10 +196,10 @@ function myFunction() { var asciiCode, encryptedText = "";
 		       for (i = 0, i < inVar.length; i++) {
 			       var c = str[i];
 			       var asciiCode = str.charCodeAt(i);			
-			       if ((code >= 65) && (code <= 90))
+			       if ((asciicode >= 65) && (asciicode <= 90))
 				       c = String.fromCharCode(((code - 65 + 7) % 26) + 65);
-			       else if ((code >= 97) && (code <= 122))
-				       c = String.fromCharCode(((code - 97 + 7) % 26) + 97);
+			       else if ((asciicode >= 97) && (asciicode <= 122))
+				       c = String.fromCharCode(((asciicode - 97 + 7) % 26) + 97);
 			encryptedText += c;
 			       document.getElementById("out").innerHTML = encryptedText;
 		       }			       
