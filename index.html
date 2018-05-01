@@ -179,6 +179,7 @@
       <strong>
         Caesar Cipher
       </strong>
+<!--Caesar Chiper charCodeAt and fromCharCode https://www.w3schools.com/jsref/jsref_charCodeAt.asp & https://www.w3schools.com/jsref/jsref_fromCharCode.asp-->
     </p>
     <p>
       Enter A Message
@@ -200,13 +201,16 @@
             var shift = document.getElementById("input2").value;
 	    var encryptedText = "";
             var i;
+	    // Input
             for (i = 0; i < input.length; i++) {
 	      var asciicode = input.charCodeAt(i);
 	      var c = input[i];
+	    // Processing 
               if (65 <= asciicode && asciicode <=  90) 
                 c = String.fromCharCode((asciicode - 65 + shift ) % 26 + 65);
               else if (97 <= asciicode && asciicode <= 122) 
                 c = String.fromCharCode((asciicode - 97 + shift) % 26 + 97);
+	    // Output
               encryptedText += c;
 	    }
 	    document.getElementById("output").innerHTML = "Encrypted Message: " + encryptedText;
@@ -217,6 +221,7 @@
   <h2>
     Website Accessability and Usability
   </h2>
+<!--Referenced this website http://www.biapt.org.uk/accessibility.shtml -->
     <p>
       In order to have a professional portfolio, I have designed the website to be accessible for everyone regardless of disabilities and impairments, and device or browser.
       <br />
