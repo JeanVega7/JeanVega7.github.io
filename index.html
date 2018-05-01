@@ -193,8 +193,9 @@ function myFunction() {
 function myFunction() { var asciiCode, encryptedText = "";
 		       // Input
 		       var str = document.getElementById("in");
-		       
-		       document.getElementById("out").innerHTML = str;
+		       for (i = 0, i < str.length; i++) {
+			       var n = str.charCodeAt(i);
+		document.getElementById("out").innerHTML = n;
 		       }			       
 </script>
 </div>
